@@ -6,7 +6,7 @@ An intermediate-level reverse-engineering exercise to get comfortable with analy
 
 ## Overview
 
-This project explores the reverse engineering of **ALVAS.AUDIO**, a Windows Forms (.NET) audio player, to identify and modify its maximum playback-speed limit.
+This project explores the reverse engineering of **ALVAS.AUDIO** specifically AudioCS.exe, a Windows Forms (.NET) audio player, to identify and modify its maximum playback-speed limit.
 
 The objective was to understand how the application handled playback speed, trace the relationship between its frontend controls and backend audio engine, and modify the executable to support higher playback speeds.
 
@@ -248,20 +248,6 @@ The modification extends the available playback-speed range from 6x to 10x.
 
 ---
 
-## 5. Testing and Verification
-
-After patching the executable, the modified application can be tested to verify the changes.
-
-The following points should be checked:
-
-- The application starts correctly.
-- The slider reaches its new maximum value.
-- The displayed speed corresponds to the selected slider position.
-- Playback speed changes as expected.
-- Normal playback speed remains functional.
-
-**Screenshots of the modified application and testing results can be added here.**
-
 ---
 
 ## 6. Key Takeaways
@@ -289,11 +275,11 @@ dotnet-audio-player-reverse-engineering/
 │
 ├── README.md
 │
-└── original-audio-player/
-    └── ALVAS.AUDIO.exe
+└── bin/
+    └── AudioCS.exe
 ```
 
-The `original-audio-player/` folder contains the original ALVAS.AUDIO executable used during this exercise.
+The `bin/` folder contains the original AudioCS.exe executable used during this exercise.
 
 You can use it to follow the analysis, explore the application's internals, and reproduce the reverse-engineering process.
 
